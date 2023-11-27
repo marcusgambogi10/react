@@ -1,0 +1,12 @@
+.inputValue {
+    display: block;
+    width: 320px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.indexResult {
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
