@@ -24,7 +24,7 @@ function App() {
   }
 
   function calcularIMC() {
-    const novoIMC = peso / (altura * altura);
+    const novoIMC = peso / (altura/100 * altura/100);
     setIMC(novoIMC);
 
     if (novoIMC < 18.5) {
