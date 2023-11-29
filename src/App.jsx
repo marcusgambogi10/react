@@ -8,6 +8,13 @@ function App() {
   const [imc, setIMC] = useState(0);
   const [classificacao, setClassificacao] = useState("");
 
+  const handleKeyPress = (e) => {
+    const isNumeric = /^[0-9\b]+$/.test(e.key);
+    if (!isNumeric && e.key !== 'Tab') {
+      e.preventDefault();
+    }
+  }
+
   function handleAlturaChange(event) {
     setAltura(Number(event.target.value));
   }
@@ -53,6 +60,7 @@ function App() {
           id="altura"
           placeholder="Digite sua altura"
           value={altura}
+          onKeyDown={handleKeyPress}
           onChange={handleAlturaChange}
         />
       </div>
@@ -67,6 +75,7 @@ function App() {
           id="peso"
           placeholder="Digite seu peso"
           value={peso}
+          onKeyDown={handleKeyPress}
           onChange={handlePesoChange}
         />
       </div>
